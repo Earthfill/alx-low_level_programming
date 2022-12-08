@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -E -o
+export CFILE=0-main.c
