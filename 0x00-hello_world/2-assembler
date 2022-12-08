@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -s $CFILE
+gcc -s $CFILE -o 2-assembly.s
