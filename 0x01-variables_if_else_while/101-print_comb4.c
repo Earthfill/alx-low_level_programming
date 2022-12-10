@@ -7,21 +7,16 @@
 
 int main(void)
 {
-	char digit[4];
+	char h;
 
-	for (int i = 0; i < 8; i++)
+	char t;
+
+	char u;
+
+	while ((h <= '7') || (t <= '8') || (u <= '9'))
 	{
-		for (int j = i + 1; j < 9; j++)
-		{
-			for (int k = j + 1; k < 10; k++)
-			{
-				digit[0] = i + '0';
-				digit[1] = j + '0';
-				digit[2] = k + '0';
-				digit[3] = '\0';
-				printf("%s\n", digit);
-			}
-		}
+		printf ("%c%c%c, ", h, t, u);
+		u != '9' ? ++u : (t != '8' ? (++t, u = t + 1) : (++h, t = h + 1, u = t + 1));
 	}
 	return (0);
 }
