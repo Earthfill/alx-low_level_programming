@@ -7,16 +7,32 @@
 
 int main(void)
 {
-	char h;
+	int h;
 
-	char t;
+	int t;
 
-	char u;
+	int u;
 
-	while ((h <= '7') || (t <= '8') || (u <= '9'))
+	u = 0;
+	t = 1;
+	h = 2;
+	if (u != '9')
 	{
-		printf ("%c%c%c, ", h, t, u);
-		u != '9' ? ++u : (t != '8' ? (++t, u = t + 1) : (++h, t = h + 1, u = t + 1));
+		++u;
+	}
+	else
+	{
+		if (t != '8')
+		{
+			++t;
+			u = t + 1;
+		}
+		else
+		{
+			++h;
+			t = h + 1;
+			u = t + 1;
+		}
 	}
 	return (0);
 }
