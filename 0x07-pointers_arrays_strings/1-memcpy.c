@@ -1,5 +1,5 @@
 /*
- * File: 0-memset.c
+ * File: 1-memcpy.c
  * Auth: not
 */
 
@@ -14,7 +14,7 @@
  *
  * Return: A pointer to the filled memory area @s.
 */
-void *_memcpy(void *dest, char *src, size_t n)
+void *_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int index;
 	unsigned char *destination = dest;
