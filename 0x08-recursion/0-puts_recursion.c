@@ -1,4 +1,4 @@
-/**
+/*
  * File: 0-puts_recursion.c
  * Auth: kingslee
 */
