@@ -25,4 +25,6 @@ int find_sqrt(int num, int root)
 		return (num);
 
 	return (-1);
+
+	return (-1);
 }
