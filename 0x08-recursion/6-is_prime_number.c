@@ -4,25 +4,44 @@
 */
 
 #include "main.h"
-int is_divisible(int num, int r);
-int _sqrt_recursion(int n);
+/**
+ * evaluate_num - recursion loop
+ * @num: num
+ * @iterator: number to iterate.
+ * Return: return 1 or 0
+*/
+
+int evaluate_num(int num, int iterator)
+{
+	if (iterator == num - 1)
+	{
+		return (1);
+	}
+	else if (num % iterator != 0)
+	{
+		return (evaluate_num(num, iterator + 1));
+	}
+
+	return (0);
+}
 
 /**
- *  * find_sqrt - Finds the natural square root of an inputted number.
- *   * @num: The number to find the square root of.
- *    * @root: The root to be tested.
- *     *
- *      * Return: If the number has a natural square root - the square root.
- *       * If the number does not have a natural square root - -1.
- *       */
-int find_sqrt(int num, int root)
-{
-	        if (root == 0 || root == 1)
-			                return (root);
-		        else if (num * num < root)
-				                return (find_sqrt(num + 1, root));
-			        else if (num * num == root)
-					                return (num);
+ * is_prime_number - evaluate prime or not
+ * @num: number
+ * Return: return 1 prime - return 0 otherwise
+*/
 
-				        return (-1);
+int is_prime_number(int num)
+{
+	int iterator;
+
+	iterator = 2;
+
+	if (num < 2)
+		return (0);
+
+	if (num == 2)
+		return (1);
+
+	return (evaluate_num(num, iterator));
 }
